@@ -24,8 +24,8 @@ class PINN:
             net.append(nn.Linear(layers[i],layers[i+1])) #1,20; 20,20; 20,1
             if i < len(layers)-2 : # last layer don't need nonlinearity
                 net.append(nn.Tanh())
-            self.model = nn.Sequential(*net)
-            self.optimizer = torch.optim.Adam (self.model.parameters(),lr=lr)
+        self.model = nn.Sequential(*net)
+        self.optimizer = torch.optim.Adam (self.model.parameters(),lr=lr)
 
     def forward(self,x):
         return self.model(x)
