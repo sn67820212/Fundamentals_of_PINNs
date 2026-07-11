@@ -66,5 +66,5 @@ for step in range (5000):
 import math
 exact = math.exp (-0.1*math.pi**2*0.5)*math.sin(math.pi*0.5)
 with torch.no_grad():
-    pred = pinn.forward(torch.tensor([0.5,0.5])).item()
+    pred = pinn.forward(torch.tensor([[0.5,0.5]])).item()
     print(f"Exact: {exact}\n PINN: {pred}")
