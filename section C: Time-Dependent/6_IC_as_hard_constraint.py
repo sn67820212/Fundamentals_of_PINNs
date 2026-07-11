@@ -68,3 +68,7 @@ exact = math.exp (-0.1*math.pi**2*0.5)*math.sin(math.pi*0.5)
 with torch.no_grad():
     pred = pinn.forward(torch.tensor([[0.5,0.5]])).item()
     print(f"Exact: {exact}\n PINN: {pred}")
+# if u remember we did pred = pinn.forward(torch.tensor([0.5,0.5])).item() in level 5 i.e. shape (2,)
+# but pred = pinn.forward(torch.tensor([[0.5,0.5]])).item() here has shape (2,1)
+# These concepts come under the error handling part and are outside the scope of tutorial as:
+# our aim here is to build functional understanding only. If I feel like uploading more crucial parts, I may mention it in future.
