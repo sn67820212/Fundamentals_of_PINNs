@@ -75,3 +75,6 @@ plt.show()
 # So, the model tends to learn simple solution.
 # This is one of the limitation of PINN.
 # U get only one model and there can be multiple solutions which u wouldn't know with nn.
+
+# Thank u for your patience. The goal of this tutorial is served.
+# If I make useful content in future, I will let you know.
