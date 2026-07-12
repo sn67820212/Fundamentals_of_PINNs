@@ -69,3 +69,9 @@ plt.plot (x,true_k,label='exact solution')
 plt.plot (x,k_guess,label='PINN_solution')
 plt.legend()
 plt.show()
+
+# my model got settled at x=1.
+# upon further investigation, I found k(x)=1 also satisfies the given problem.
+# So, the model tends to learn simple solution.
+# This is one of the limitation of PINN.
+# U get only one model and there can be multiple solutions which u wouldn't know with nn.
